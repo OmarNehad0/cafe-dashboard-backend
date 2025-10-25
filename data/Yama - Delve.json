@@ -1,0 +1,90 @@
+[{
+      "name": "Yama Contracts",
+      "aliases": [
+        "contracts"
+      ],
+      "caption": "For OathPlate Contract Create Ticket To Discuss\nPrices below are per kill.\nAssuming Max Gear\nUpcharges may apply based on Gear.\nYou keep all loot.\nParsec +50%",
+      "items": [
+        {
+          "name": "Full Radiant Kit",
+          "price": 350000000,
+          "image" : "https://oldschool.runescape.wiki/images/thumb/Radiant_oathplate_chest_detail.png/800px-Radiant_oathplate_chest_detail.png?aef32"
+        },
+        {
+          "name": "Contract of glyphic attenuation",
+          "price": 100000000,
+          "image" : "https://oldschool.runescape.wiki/images/thumb/Yama.png/560px-Yama.png?7653a"
+        },
+        {
+          "name": "Contract of forfeit breath",
+          "price": 100000000,
+          "image" : "https://oldschool.runescape.wiki/images/thumb/Radiant_oathplate_chest_detail.png/800px-Radiant_oathplate_chest_detail.png?aef32"
+        },
+        {
+          "name": "Contract of sensory clouding",
+          "price": 100000000,
+          "image" : "https://oldschool.runescape.wiki/images/thumb/Yama.png/560px-Yama.png?7653a"
+        },
+        {
+          "name": "Contract of divine severance",
+          "price": 100000000,
+          "image" : "https://oldschool.runescape.wiki/images/thumb/Radiant_oathplate_chest_detail.png/800px-Radiant_oathplate_chest_detail.png?aef32"
+        },
+        {
+          "name": "Contract of bloodied blows",
+          "price": 10000000,
+          "image" : "https://oldschool.runescape.wiki/images/thumb/Yama.png/560px-Yama.png?7653a"
+        },
+        {
+          "name": "Contract of shard acquisition",
+          "price": 150000000,
+          "image" : "https://oldschool.runescape.wiki/images/thumb/Radiant_oathplate_chest_detail.png/800px-Radiant_oathplate_chest_detail.png?aef32"
+        },
+        {
+          "name": "Pet Contract",
+          "price": 75000000,
+          "image" : "https://oldschool.runescape.wiki/images/thumb/Yama.png/560px-Yama.png?7653a"
+        }
+               ],
+          "emoji" : "<:560pxYama:1376859288038932591>"
+      },
+     {
+      "name": "Yama",
+      "aliases": [
+        "yama"
+      ],
+      "caption": "Prices below are per kill.\nAssuming Max Gear\nUpcharges may apply based on Gear.\nYou keep all loot.",
+      "items": [
+        {
+          "name": "Yama - Solo",
+          "price": 8000000,
+          "image" : "https://oldschool.runescape.wiki/images/thumb/Yama.png/560px-Yama.png?7653a"
+        },
+        {
+          "name": "Yama - Duo",
+          "price": 5000000,
+          "image" : "https://oldschool.runescape.wiki/images/thumb/Yama.png/560px-Yama.png?7653a"
+        }
+               ],
+          "emoji" : "<:560pxYama:1376859288038932591>"
+      },
+{
+      "name": "Delve",
+      "aliases": [
+        "delve"
+      ],
+      "caption": "Prices below are per kill.\nAssuming Max Gear\nUpcharges may apply based on Gear.\nYou keep all loot.",
+      "items": [
+        {
+          "name": "Wave 1-8",
+          "price": 55000000,
+          "image" : "https://oldschool.runescape.wiki/images/thumb/Doom_of_Mokhaiotl.png/1024px-Doom_of_Mokhaiotl.png?e5edb"
+        },
+        {
+          "name": "Each Wave Starting From Wave 8",
+          "price": 15000000,
+          "image" : "https://oldschool.runescape.wiki/images/thumb/Doom_of_Mokhaiotl.png/1024px-Doom_of_Mokhaiotl.png?e5edb"
+        }
+               ],
+          "emoji" : "<:277pxDoom_of_Mokhaiotl:1402677671506345994>"
+      }]
