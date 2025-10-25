@@ -24,6 +24,18 @@ router.post("/", requireAuth, async (req, res) => {
   }
 });
 
+// server.js
+import fs from "fs";
+import path from "path";
+
+app.get("/api/items", (req, res) => {
+  const filePath = path.resolve("./data/items.json"); // adjust path if needed
+  const raw = fs.readFileSync(filePath, "utf8");
+  const data = JSON.parse(raw);
+  res.json(data);
+});
+
+
 // PUT /api/items/:id  - update (requires auth)
 router.put("/:id", requireAuth, async (req, res) => {
   try {
