@@ -17,7 +17,15 @@ const corsOptions = {
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
 };
-app.use(cors(corsOptions));
+app.use(cors({
+  origin: [
+    "https://dashboard-gules-nine-32.vercel.app", // your Vercel frontend
+    "http://localhost:3000" // optional: for local testing
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
+
 app.use(bodyParser.json());
 
 // basic health route
