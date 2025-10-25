@@ -14,7 +14,8 @@ router.post("/login", (req, res) => {
   const { username, password } = req.body;
   
   console.log("Login Attempt:", username, password);
-  console.log("Expected:", process.env.ADMIN_USERNAME, process.env.ADMIN_PASSWORD);
+  console.log("Expected:", process.env.ADMIN_USER, process.env.ADMIN_PASS);
+
 
   if (
     username === process.env.ADMIN_USER &&
