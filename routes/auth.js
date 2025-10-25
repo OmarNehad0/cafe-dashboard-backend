@@ -10,21 +10,21 @@ const router = express.Router();
 // Simple admin login using env variables.
 // For production you might use hashed password in DB.
 // We will compare provided credentials to ADMIN_USER and ADMIN_PASS from .env
-router.post("/login", async (req, res) => {
-  const { username, password } = req.body || {};
-  if (!username || !password) return res.status(400).json({ message: "Missing credentials" });
+router.post("/login", (req, res) => {
+  const { username, password } = req.body;
+  
+  console.log("Login Attempt:", username, password);
+  console.log("Expected:", process.env.ADMIN_USERNAME, process.env.ADMIN_PASSWORD);
 
-  // If you store admin pass as plain text in env (simple), compare directly
-  // for slightly more secure: you can store bcrypt hashed ADMIN_PASS and compare
-  const adminUser = process.env.ADMIN_USER;
-  const adminPass = process.env.ADMIN_PASS;
-
-  if (username === adminUser && password === adminPass) {
-    const token = jwt.sign({ username }, process.env.JWT_SECRET, { expiresIn: "12h" });
-    return res.json({ token });
+  if (
+    username === process.env.ADMIN_USERNAME &&
+    password === process.env.ADMIN_PASSWORD
+  ) {
+    const token = jwt.sign({ username }, process.env.JWT_SECRET, { expiresIn: "1d" });
+    res.json({ token });
+  } else {
+    res.status(401).json({ message: "Invalid credentials" });
   }
-
-  return res.status(401).json({ message: "Invalid credentials" });
 });
 
 export default router;
