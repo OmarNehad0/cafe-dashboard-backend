@@ -1,0 +1,100 @@
+[
+    {
+      "name": "Normal",
+      "aliases": [
+        "gauntlet"
+      ],
+      "items": [
+        {
+          "name": "Normal - 70+",
+          "price": 2000000
+        }
+      ]
+    },
+    {
+      "name": "Corrupted - With Rigour And Augury",
+      "aliases": [
+        "cg"
+      ],
+      "items": [
+        {
+          "name": "99",
+          "price": 2900000
+        },
+        {
+          "name": "95+",
+          "price": 3200000
+        },
+        {
+          "name": "90+",
+          "price": 3600000
+        },
+        {
+          "name": "85+",
+          "price": 3900000
+        },
+        {
+          "name": "80+",
+          "price": 4200000
+        },
+        {
+          "name": "75+",
+          "price": 4700000
+        }
+      ]
+    },
+    {
+      "name": "Corrupted - Without Rigour And Augury",
+      "aliases": [
+        "cg"
+      ],
+      "caption": "+200k If no piety",
+      "items": [
+        {
+          "name": "99",
+          "price": 3300000
+        },
+        {
+          "name": "95+",
+          "price": 3600000
+        },
+        {
+          "name": "90+",
+          "price": 3900000
+        },
+        {
+          "name": "85+",
+          "price": 4200000
+        },
+        {
+          "name": "80+",
+          "price": 4500000
+        },
+        {
+          "name": "75+",
+          "price": 5000000
+        }
+      ]
+    },
+    {
+      "name": "Gauntlet Bundles",
+      "aliases": [
+        "cgbundles"
+      ],
+      "caption": "All the bundle discounts stacked with your discount rank IF Ur Rank<Zuk.",
+      "items": [
+        {
+          "name": "(4% off for 50kc or more)"
+        },
+        {
+          "name": "(5% off for 100kc or more)"
+        },
+        {
+          "name": "(6% off for 200kc or more)"
+        },
+        {
+          "name": "(10% off for 400kc or more)"
+        }
+      ]
+    }
+  ]
