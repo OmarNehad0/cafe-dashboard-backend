@@ -17,8 +17,8 @@ router.post("/login", (req, res) => {
   console.log("Expected:", process.env.ADMIN_USERNAME, process.env.ADMIN_PASSWORD);
 
   if (
-    username === process.env.ADMIN_USERNAME &&
-    password === process.env.ADMIN_PASSWORD
+    username === process.env.ADMIN_USER &&
+    password === process.env.ADMIN_PASS
   ) {
     const token = jwt.sign({ username }, process.env.JWT_SECRET, { expiresIn: "1d" });
     res.json({ token });
