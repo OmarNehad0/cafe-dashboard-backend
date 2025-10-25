@@ -1,43 +1,26 @@
-// routes/items.js
 import express from "express";
-import fs from "fs";
-import path from "path";
-import { requireAuth } from "../middleware/auth.js";
+import Item from "../models/Item.js";
 
 const router = express.Router();
 
-// Path to data file
-const dataPath = path.resolve("./data/items.json");
-
-// === GET /api/items ===
-router.get("/", async (req, res) => {
+router.get("/api/items", async (req, res) => {
   try {
-    const raw = fs.readFileSync(dataPath, "utf8");
-    const items = JSON.parse(raw);
+    const items = await Item.find();
     res.json(items);
   } catch (err) {
-    console.error("❌ Error reading items.json:", err);
-    res.status(500).json({ message: "Failed to load items." });
+    res.status(500).json({ message: err.message });
   }
 });
 
-// === POST /api/items ===
-router.post("/", requireAuth, async (req, res) => {
+router.post("/api/items", async (req, res) => {
   try {
-    const raw = fs.readFileSync(dataPath, "utf8");
-    const items = JSON.parse(raw);
-
-    const newItem = req.body;
-    items.push(newItem);
-
-    fs.writeFileSync(dataPath, JSON.stringify(items, null, 2));
-    res.json({ item: newItem });
+    const { name, category, price, image, caption, emoji } = req.body;
+    const item = new Item({ name, category, price, image, caption, emoji });
+    await item.save();
+    res.status(201).json(item);
   } catch (err) {
-    console.error("❌ Error writing to items.json:", err);
-    res.status(500).json({ message: "Failed to save item." });
+    res.status(500).json({ message: "Failed to add item." });
   }
 });
 
 export default router;
-
-
